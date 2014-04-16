@@ -13,8 +13,10 @@ If you're running Ubuntu, the corresponding package names are `python-pip python
 
 You need a Postgres database. If you're using PostGIS 2.x, this is quite simple:
 
-```$ createdb open511example
-$ psql open511example -c "CREATE EXTENSION postgis;"```
+```
+$ createdb open511example
+$ psql open511example -c "CREATE EXTENSION postgis;"
+```
 
 If you're using an earlier version of PostGIS, there are a few more steps; the [GeoDjango documentation](https://docs.djangoproject.com/en/1.6/ref/contrib/gis/install/#installation) has details.
 
@@ -38,10 +40,12 @@ The first time you run this, it'll ask you to create a user. You should.
 
 ### Load sample data
 
-```(open511example)$ python manage.py loaddata sample_data/jurisdiction.json
+```
+(open511example)$ python manage.py loaddata sample_data/jurisdiction.json
 Installed 2 object(s) from 1 fixture(s)
 (open511example)$ python manage.py open511_import sample_data/events.xml 
-2 entries imported```
+2 entries imported
+```
 
 ### Launch the app
 
