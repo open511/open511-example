@@ -1,0 +1,67 @@
+<open511 xmlns:gml="http://www.opengis.net/gml" xml:base="http://localhost:8000" version="v0">
+  <events>
+    <event xml:lang="en-us">
+      <status>ACTIVE</status>
+      <link rel="self" href="/api/events/example.open511.org/1/"/>
+      <link rel="jurisdiction" href="http://localhost:8000/api/jurisdictions/example.open511.org/"/>
+      <id>example.open511.org/1</id>
+      <severity>MAJOR</severity>
+      <headline>Sample event 1</headline>
+      <description>Here, I describe the event.</description>
+      <schedules>
+        <schedule>
+          <start_time>01:00</start_time>
+          <days>
+            <day>6</day>
+            <day>7</day>
+          </days>
+          <start_date>2014-04-23</start_date>
+          <end_time>05:00</end_time>
+        </schedule>
+      </schedules>
+      <roads>
+        <road>
+          <to>Exit 2</to>
+          <direction>N</direction>
+          <from>Exit 1</from>
+          <name>Autoroute 40</name>
+          <state>CLOSED</state>
+        </road>
+      </roads>
+      <geography>
+        <gml:Point srsName="urn:ogc:def:crs:EPSG::4326">
+          <gml:pos>45.5823286203 -73.5905456543</gml:pos>
+        </gml:Point>
+      </geography>
+      <event_type>CONSTRUCTION</event_type>
+      <created>2014-04-16T20:22:51+00:00</created>
+      <updated>2014-04-16T20:22:51+00:00</updated>
+    </event>
+    <event xml:lang="en-us">
+      <status>ACTIVE</status>
+      <link rel="self" href="/api/events/example.open511.org/2/"/>
+      <link rel="jurisdiction" href="http://localhost:8000/api/jurisdictions/example.open511.org/"/>
+      <id>example.open511.org/2</id>
+      <severity>MINOR</severity>
+      <headline>Sample event 2</headline>
+      <schedules>
+        <schedule>
+          <specific_dates>
+            <specific_date>2014-04-29 10:00-16:00</specific_date>
+          </specific_dates>
+        </schedule>
+      </schedules>
+      <geography>
+        <gml:LineString srsName="urn:ogc:def:crs:EPSG::4326">
+          <gml:posList>45.604430579 -74.0437316895 45.5871341344 -73.9050292969 45.6591674833 -73.9283752441</gml:posList>
+        </gml:LineString>
+      </geography>
+      <event_type>SPECIAL_EVENT</event_type>
+      <created>2014-04-16T20:24:19+00:00</created>
+      <updated>2014-04-16T20:24:19+00:00</updated>
+    </event>
+  </events>
+  <pagination>
+    <offset>0</offset>
+  </pagination>
+</open511>
