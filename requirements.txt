@@ -5,4 +5,4 @@ psycopg2
 django-extensions==1.2.5
 
 # Uncomment the following line to install the UI
-# -e git+http://github.com/opennorth/roadcast.git#egg=roadcast
+# -e git+https://github.com/opennorth/roadcast.git#egg=roadcast
