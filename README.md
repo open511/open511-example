@@ -62,3 +62,12 @@ To install it, make sure that you have [Node.JS](http://nodejs.org/) (0.10 or gr
 Then run ```(open511example)$ pip install -e git+http://github.com/opennorth/roadcast.git#egg=roadcast```
 
 If everything goes well, you should be able to start the server (as above) and visit http://localhost:8000/map/
+
+### Set up data imports
+
+The usual way to load data feeds into the system is via `open511_import` run as a scheduled task. For example, to load updates from a TMDD feed, run the following commands every time a TMDD message is received:
+
+```
+(open511example)$ open511-convert tmdd.xml -f xml > converted-tmdd.xml
+(open511example)$ python manage.py open511_import converted-tmdd.xml
+```
