@@ -59,7 +59,7 @@ Open North has created a user interface for viewing and editing events on an Ope
 
 To install it, make sure that you have [Node.JS](http://nodejs.org/) (0.10 or greater) installed. (You also need NPM, the Node package manager; this is generally included with Node, but some distributions may need you to install a separate `npm` package.)
 
-Then run ```(open511example)$ pip install -e git+http://github.com/opennorth/roadcast.git#egg=roadcast```
+Then run ```(open511example)$ pip install -e git+http://github.com/open511/roadcast.git#egg=roadcast```
 
 If everything goes well, you should be able to start the server (as above) and visit http://localhost:8000/map/
 
