@@ -1,6 +1,5 @@
-https://www.djangoproject.com/download/1.7b1/tarball/#egg=Django
 psycopg2
--e git+https://github.com/open511/open511.git#egg=open511
+open511>=0.5
 -e git+https://github.com/open511/open511-server.git#egg=open511-server
 django-extensions==1.2.5
 
