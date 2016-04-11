@@ -39,7 +39,9 @@ connection info. Then, run:
 
 ```(open511example)$ python manage.py migrate```
 
-The first time you run this, it'll ask you to create a user. You should.
+Create a username and password to access the administrative interface:
+
+```(open511example)$ python manage.py createsuperuser```
 
 ### Load sample data
 
