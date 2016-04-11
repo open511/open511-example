@@ -34,6 +34,9 @@ That'll create a directory containing your new environment. To enable it, run `s
 
 ### Initialize the database
 
+You'll likely need to edit `open511_example/settings.py` to enter your database
+connection info. Then, run:
+
 ```(open511example)$ python manage.py migrate```
 
 The first time you run this, it'll ask you to create a user. You should.

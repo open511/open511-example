@@ -1,23 +1,28 @@
 """
-Django settings for open511_example project.
+This is a starting point for settings for an Open511 Django project.
 
-For more information on this file, see
-https://docs.djangoproject.com/en/1.6/topics/settings/
-
-For the full list of settings and their values, see
-https://docs.djangoproject.com/en/1.6/ref/settings/
+These are fine for development, but *not* suitable for production.
+See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
+for more on production settings.
 """
 
 import os
 
 OPEN511_BASE_URL = 'http://localhost:8000'
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# Customize database connection info here.
+# (Add HOST and PORT keys if you need to connect to Postgres over TCP.)
+# Many more settings are available, and documented at:
+# https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': 'open511example',
+        'USER': 'open511example',
+        'PASSWORD': 'open511example',
+    }
+}
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'thisisinsecure'
@@ -27,6 +32,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Application definition
 
@@ -76,16 +83,6 @@ TEMPLATES = [
     },
 ]
 
-
-# Database
-# https://docs.djangoproject.com/en/1.6/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'NAME': 'open511example'
-    }
-}
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
