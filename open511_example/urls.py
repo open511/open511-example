@@ -2,11 +2,13 @@ from django.conf.urls import include, url
 
 from django.contrib import admin
 
+from .hello import simple_index_page
+
 urlpatterns = [
 
     url(r'^api/', include('open511_server.urls')),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', 'open511_example.hello.simple_index_page'),
+    url(r'^$', simple_index_page),
     
 ]
 
