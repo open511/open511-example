@@ -1,4 +1,4 @@
-<open511 xmlns:gml="http://www.opengis.net/gml" xml:base="http://localhost:8000" version="v0">
+<open511 xmlns:gml="http://www.opengis.net/gml" xml:base="http://localhost:8000" version="v1">
   <events>
     <event xml:lang="en-us">
       <status>ACTIVE</status>
@@ -8,17 +8,19 @@
       <severity>MAJOR</severity>
       <headline>Sample event 1</headline>
       <description>Here, I describe the event.</description>
-      <schedules>
-        <schedule>
-          <start_time>01:00</start_time>
-          <days>
-            <day>6</day>
-            <day>7</day>
-          </days>
-          <start_date>2014-04-23</start_date>
-          <end_time>05:00</end_time>
-        </schedule>
-      </schedules>
+      <schedule>
+        <recurring_schedules>
+          <recurring_schedule>
+            <daily_start_time>01:00</daily_start_time>
+            <days>
+              <day>6</day>
+              <day>7</day>
+            </days>
+            <start_date>2014-04-23</start_date>
+            <daily_end_time>05:00</daily_end_time>
+          </recurring_schedule>
+        </recurring_schedules>
+      </schedule>
       <roads>
         <road>
           <to>Exit 2</to>
@@ -44,13 +46,11 @@
       <id>example.open511.org/2</id>
       <severity>MINOR</severity>
       <headline>Sample event 2</headline>
-      <schedules>
-        <schedule>
-          <specific_dates>
-            <specific_date>2014-04-29 10:00-16:00</specific_date>
-          </specific_dates>
-        </schedule>
-      </schedules>
+      <schedule>
+        <intervals>
+          <interval>2014-04-29T10:00/2014-04-29T16:00</interval>
+        </intervals>
+      </schedule>
       <geography>
         <gml:LineString srsName="urn:ogc:def:crs:EPSG::4326">
           <gml:posList>45.604430579 -74.0437316895 45.5871341344 -73.9050292969 45.6591674833 -73.9283752441</gml:posList>
